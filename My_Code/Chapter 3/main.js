@@ -7,6 +7,5 @@ var namesOfDifferentTypeOfPeople = [
     "Werner",
     "Rafe",
     "Axel",
-    "Mandisa",
-    ""
+    "Mandisa"   
 ];
