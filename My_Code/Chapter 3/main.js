@@ -20,3 +20,4 @@ namesOfDifferentTypeOfPeople[6] = "Best Friend (Rafe)";
 namesOfDifferentTypeOfPeople[7] = "Best Friends (Axel)";
 namesOfDifferentTypeOfPeople[8] = "Mother";
 
+var random = [1, 2, "string", "string2", ["Kabelo",[12500 , 13500, 14500], "Kabelo"], true]
