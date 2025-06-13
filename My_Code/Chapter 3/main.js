@@ -9,3 +9,5 @@ var namesOfDifferentTypeOfPeople = [
     "Axel",
     "Mandisa"   
 ];
+
+namesOfDifferentTypeOfPeople[0] = "Me";
