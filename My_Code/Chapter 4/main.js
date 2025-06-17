@@ -9,3 +9,5 @@ var myPerson = {
 myPerson["myFavouriteHobbies"] = ["Exercising", "Computing", "Reading", "Meditating", "Thinking", 
         "Socializing"];
 
+    
+
