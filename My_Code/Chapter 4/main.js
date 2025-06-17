@@ -12,22 +12,22 @@ myPerson["myFavouriteHobbies"] = ["Exercising", "Computing", "Reading", "Meditat
 
 var myFamily = {
     "Tamiya Xabendlini": {
-        dateOfBirth: 21/12/1999,
-        gender: Female,
+        dateOfBirth: "21 December 2025",
+        gender: "Female",
         Hobbies: ["Culinary", "NetFlix", "Exercise"],
         Age: "25"
     },
 
     "uTa Xabendlini": {
-        dateOfBirth: 29/9/1973,
-        gender: Male,
+        dateOfBirth: "29 September 1973",
+        gender: "Male",
         Hobbies: ["Carpentry", "Exercising", "Documentaries", "Meditating in prayer"],
         Age: "51"
     },
 
     "uMa Xabendlini": {
-        dateOfBirth: 4/7/1975,
-        gender: Female,
+        dateOfBirth: "04 July 1975",
+        gender: "Female",
         Hobbies: ["Teaching", "Jogging", "Entertainment"],
         Age: "49"
     }
