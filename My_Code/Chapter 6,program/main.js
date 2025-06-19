@@ -23,17 +23,24 @@
 
 // ***************************Line 21 to 27*************************************
 
-// var myAge = 0;
+var random = 0
 
-// while (random < 10) {
-//     console.log(random)
-//     random++
-// };
-
-// ***************************Line 34 to 39*************************************
-
-for (var myAge = 0; myAge >= 19; myAge <= 19){
-    console.log("Kabelo is myAge; " + myAge)
+while (random < 10) {
+    console.log(random)
+    random++
+}; for( var random = 0; random <= 5; random =6) {
+      console.log("my number is random; " + random)
 };
 
 alert("You are done.")
+
+
+// ***************************Line 34 to 39*************************************
+
+// for (var myAge = 0; myAge <= 5; myAge = 6) {
+//     console.log("My age is myAge; " + myAge)
+// };
+
+// alert("You are done.")
+
+// ***************************Line 26 to 39*************************************
