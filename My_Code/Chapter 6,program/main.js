@@ -1,12 +1,12 @@
-var myName = prompt("Please set your name?").toTitleCase();
+var myName = prompt("Please set your name?").toLowerCase();
 
-if (myName == "Kabelo Xabendlini") {
+if (myName == "kabelo xabendlini") {
     console.log("hello" + myName);
-} else if (myName == ""){
+} else if (myName == "tamiya xabendlini"){
     console.log("hello" + myName)
 
 } else {
-
+    
 };
 
 console.log("Goodbye");
