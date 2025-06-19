@@ -28,7 +28,9 @@ var random = 0
 while (random < 10) {
     console.log(random)
     random++
-}; for( var random = 0; random <= 5; random =6) {
+}; 
+
+for( var random = 0; random <= 5; random =6) {
       console.log("my number is random; " + random)
 };
 
