@@ -17,8 +17,18 @@
 
 // ******************************************** Line 20 - 24 *****************************************
 
-var numbers = "float('inf')";{
-var randomString = alphabet[Math.floor(Math.random) * numbers.length]   
-};
+// var numbers = "float('inf')";{
+// var randomString = alphabet[Math.floor(Math.random) * numbers.length]   
+// };
 
-console.log(randomString);
+// console.log(randomString);
+
+// ******************************************** Line 26 - 34 *****************************************
+
+for (let i = 0; i < 5; i++) {
+  if (i % 2 === 0) {
+    console.log(`${i} is an even number.`);
+  } else {
+    console.log(`${i} is an odd number.`);
+  }
+};
