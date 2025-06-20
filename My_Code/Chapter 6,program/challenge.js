@@ -25,12 +25,13 @@
 
 // ******************************************** Line 26 - 34 *****************************************
 
-for (let i = 0; i < 5; i++) {
-  if (i % 2 === 0) {
-    console.log(`${i} is an even number.`);
-  } else {
-    console.log(`${i} is an odd number.`);
-  }
+var name = prompt("Please set your name?");
+
+for (var i = 0; i < name.length; i++) 
+  if (name.length > 7) {
+ console.log("Wow, you have a REALLY long name!");
+} else {
+ console.log("Your name isn't very long.");
 };
 
 // ******************************************** Line 26 - 34 *****************************************
