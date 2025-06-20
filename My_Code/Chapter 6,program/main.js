@@ -1,17 +1,18 @@
 // ***************************Line 1 to 14*************************************
 
-// var myName = prompt("Please set your name?").toLowerCase();
+var myName = prompt("Please set your name?").toUpperCase();
 
-// if (myName == "kabelo xabendlini") {
-//     console.log("hello" + myName);
-// } else if (myName == "tamiya xabendlini"){
-//     console.log("hello" + myName)
+if (myName == "KABELO XABENDLINI") {
+    console.log("hello" + myName);
+} else if (myName == "TAMIYA XABENDLINI"){
+    console.log("hello" + myName)
 
-// } else {
+} else {(myName == "TAMIYA XABENDLINI")
+    console.log("hello" + myName)
 
-// };
+};
 
-// console.log("Goodbye");
+console.log("Goodbye");
 
 // ***************************Line 16 to 20*************************************
 
@@ -23,18 +24,18 @@
 
 // ***************************Line 21 to 27*************************************
 
-var random = 0
+// var random = 0
 
-while (random < 10) {
-    console.log(random)
-    random++
-}; 
+// while (random < 10) {
+//     console.log(random)
+//     random++
+// }; 
 
-for( var random = 0; random <= 5; random =6) {
-      console.log("my number is random; " + random)
-};
+// for( var random = 0; random <= 5; random =6) {
+//       console.log("my number is random; " + random)
+// };
 
-alert("You are done.")
+// alert("You are done.")
 
 
 // ***************************Line 34 to 39*************************************
