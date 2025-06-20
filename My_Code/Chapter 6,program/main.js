@@ -1,18 +1,17 @@
 // ***************************Line 1 to 14*************************************
 
-var myName = prompt("Please set your name?").toUpperCase();
+// var myName = prompt("Please set your name?").toUpperCase();
 
-if (myName == "KABELO XABENDLINI") {
-    console.log("hello" + myName);
-} else if (myName == "TAMIYA XABENDLINI"){
-    console.log("hello" + myName)
+// if (myName == "KABELO XABENDLINI") {
+//     console.log("hello" + myName);
+// } else if (myName == "TAMIYA XABENDLINI"){
+//     console.log("hello" + myName)
 
-} else {(myName == "TAMIYA XABENDLINI")
-    console.log("hello" + myName)
+// } else {
 
-};
+// };
 
-console.log("Goodbye");
+// console.log("Goodbye");
 
 // ***************************Line 16 to 20*************************************
 
@@ -47,3 +46,29 @@ console.log("Goodbye");
 // alert("You are done.")
 
 // ***************************Line 26 to 39*************************************
+
+// var sheepCounted = 0;
+// while (sheepCounted < 10) {
+// console.log("I have counted " + sheepCounted + " sheep!");
+//  sheepCounted++;
+// }
+// console.log("Zzzzzzzzzzz");
+
+// *****************************Line 59 to 68*************************************
+
+// var lemonChicken = false;
+// var beefWithBlackBean = true;
+// var sweetAndSourPork = true;
+
+// if (lemonChicken) {
+//  console.log("Great! I'm having lemon chicken!");
+// } else if (beefWithBlackBean) {
+//  console.log("I'm having the beef.");
+// } else if (sweetAndSourPork) {
+//  console.log("OK, I'll have the pork.");
+// } else {
+//  console.log("Well, I guess I'll have rice then.");
+// }
+
+// *****************************Line 59 to 68*************************************
+
