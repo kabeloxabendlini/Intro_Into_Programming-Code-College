@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hangman:The Game!</title>
 </head>
 
 <body>
@@ -15,25 +15,53 @@
             "javascript",
             "monkey",
             "amazing",
-            "pancake"
+            "pancake",
+            "computer programming",
+            "python",
+            "node.js",
+            "h.t.m.x"
         ];
         // Pick a random word
         var word = words[Math.floor(Math.random() * words.length)];
         // Set up the answer array
-        var answerArray = [];
-        for (var i = 0; i < word.length; i++) {
-            answerArray[i] = "_";
+         var answerArray = [];
+            for (var i = 0; i < word.length; i++) {
+            answerArray[i] = "_".word.length.toLowerCasef
+            index_to_check = 0
+            if(answerArray, index_to_check)
+                print("The letter at index {index_to_check2} has been guessed.")
+            else
+            print("The letter at index {index_to_check2} has not been guessed.")
         }
+        
         var remainingLetters = word.length;
         // The game loop
-        while (remainingLetters > 0) {
+        while (remainingLetters > 0) 
             // Show the player their progress
             alert(answerArray.join(" "));
+
             // Get a guess from the player
             var guess = prompt("Guess a letter, or click Cancel to stop playing.");
+            const MAX_GUESSES = 5
+            let guessCount = 0; // Or 1 if you count the first guess as attempt #1
+            // ... inside your guess handling function or event listener
+            guessCount++;
+            // ...
+            // ... after incrementing guessCount
+            if (guessCount >= MAX_GUESSES) {
+            // Game Over logic:
+            // - Display a "Game Over" message.
+            // - Disable input fields or buttons to prevent further guesses.
+            // - Optionally, reveal the correct answer.
+            // - Provide an option to restart the game.
+            alert("Game Over! You've run out of guesses.");
+            
+            // ... inside your game reset function
+            guessCount = 0; // Reset for a new game
+            // ...
+
             if (guess === null) {
                 // Exit the game loop
-                break;
             } else if (guess.length !== 1) {
                 alert("Please enter a single letter.");
             } else {
@@ -45,13 +73,11 @@
                     }
                 }
             }
-
             // The end of the game loop
         }
         // Show the answer and congratulate the player
         alert(answerArray.join(" "));
         alert("Good job! The answer was " + word);
     </script>
-</body>
-
-</html>
+</body >
+</html >
