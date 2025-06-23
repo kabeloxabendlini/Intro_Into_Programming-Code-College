@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hangman:The Game!</title>
+    <title>Document</title>
 </head>
 
 <body>
@@ -24,31 +24,26 @@
         // Pick a random word
         var word = words[Math.floor(Math.random() * words.length)];
         // Set up the answer array
-         var answerArray = [];
-            for (var i = 0; i < word.length; i++) {
-            answerArray[i] = "_"
-            index_to_check = 0
-            if(answerArray, index_to_check)
-                print("The letter at index {index_to_check2} has been guessed.")
-            else
-            print("The letter at index {index_to_check2} has not been guessed.")
+        var answerArray = [];
+        for (var i = 0; i < word.length; i++) {
+            answerArray[i] = "_";
         }
-        
         var remainingLetters = word.length;
         var wrongGuesses = 0;
         var maxWrongGuesses = 3;
 
+    
         // The game loop
-        while (remainingLetters > 0 && wrongGuesses > maxWrongGuesses) 
+        while (remainingLetters > 0 && wrongGuesses > maxWrongGuesses) {
             // Show the player their progress
             alert(answerArray.join(" "));
-
             // Get a guess from the player
             var guess = prompt("Guess a letter, or click Cancel to stop playing.").toLowerCase();
             var MAX_GUESSES = 5
 
             if (guess === null) {
                 // Exit the game loop
+                break;
             } else if (guess.length !== 1) {
                 alert("Please enter a single letter.");
             } else {
@@ -62,11 +57,13 @@
                     }
                 }
             }
+
             // The end of the game loop
-            
+        }
         // Show the answer and congratulate the player
         alert(answerArray.join(" "));
         alert("Good job! The answer was " + word);
     </script>
-</body >
-</html >
+</body>
+
+</html>
