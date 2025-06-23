@@ -18,8 +18,14 @@
 
 // **************************** Line 19 - 25 ************************************************//
 
-function printThis() {
-    for (var i = 0; i < firstParse; i++) {
-        console.log("You printed" + secondParse)
-    }
+// function printThis() {
+//     for (var i = 0; i < firstParse; i++) {
+//         console.log("You printed" + secondParse)
+//     }
+// };
+
+// **************************** Line 29 - 31 ************************************************//
+
+function doMath(x, y) {
+    x + y
 };
