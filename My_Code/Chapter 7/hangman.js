@@ -38,6 +38,6 @@ while (remainingLetters > 0) {
     // Update answerArray and remainingLetters for every correct guess
     alert(answerArray.join(" "));
     alert("Good job! The answer was " + word);
-
+    
 }
 
