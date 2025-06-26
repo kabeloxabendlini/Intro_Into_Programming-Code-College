@@ -29,3 +29,39 @@ document.getElementById("head").style.borderTop = "6px black solid";
 //         }
 //     }
 // }
+
+// var leftArm = document.getElementById("leftarm");
+// leftArm.addEventListener("click", moveRightLeft);
+
+// function moveRightLeft(e) {
+//     var robotPart = e.target;
+//     var left = 0;
+//     var id = setInterval(frame, 10) // draw every 10ms
+//     function frame() {
+//         robotPart.style.left = left + '%';
+//         left++;
+//         if (left === 70) {
+//             clearInterval(id);
+//         }
+//     }
+// }
+
+var greenColor = "green";
+
+var rightEye = document.getElementById("rightEye");
+var head = document.getElementById("head");
+var mouth = document.getElementById("mouth");
+var rightArm = document.getElementById(rightArm);
+
+rightEye.style.backgroundColor = greenColor;
+
+head.style.borderstyle = "black";
+head.style.borderstyle = "solid";
+head.style.borderstyle = "50px";
+head.style.borderLeftStyle = "none";
+head.style.borderRightStyle = "none";
+head.style.borderBottomstyle = "none";
+
+mouth.style.borderRadius = "50px";
+
+rightArm.style.left = "22.2%"
