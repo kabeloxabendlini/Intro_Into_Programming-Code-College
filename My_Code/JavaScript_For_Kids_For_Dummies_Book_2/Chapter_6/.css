@@ -25,22 +25,25 @@ p {
     width: 30%;
     height: 30%;
     border-radius: 15%;
-    background-color: #dadada;
+    background-color: #1ddf0c;
     position: absolute;
     left: 33%;
     top: 5%;
+    border-top: black 15px solid;
 }
 
 #righteye {
     position: absolute;
     left: 20%;
     top: 20%;
+    background-color: darkgoldenrod;
 }
 
 #lefteye {
     position: absolute;
     left: 60%;
     top: 20%;
+    background-color: darkred;
 }
 
 #nose {
@@ -49,7 +52,7 @@ p {
     top: 50%;
     width: 10%;
     height: 10%;
-    background-color: black;
+    background-color: darkolivegreen;
 }
 
 #mouth {
@@ -58,7 +61,7 @@ p {
     height: 15%;
     left: 20%;
     top: 70%;
-    background-color: red;
+    background-color: greenyellow;
 }
 
 #body {
@@ -67,19 +70,24 @@ p {
     top: 35%;
     width: 45%;
     height: 55%;
-    background-color: #dadada;
+    background-color: rgb(4, 68, 77);
     text-align: center;
     padding-top: 30px;
+    border-bottom: black 30px solid ;
 }
 
 #rightarm {
     position: absolute;
     left: 21%;
-}
+    background-color: rgb(4, 68, 77);
+    border-bottom: #1ddf0c 50px solid;
+} 
 
 #leftarm {
     position: absolute;
     right: 3%;
     width: 27%;
     height: 4%;
+    background-color: rgb(4, 68, 77);
+    border-right: #1ddf0c 50px solid;
 }
