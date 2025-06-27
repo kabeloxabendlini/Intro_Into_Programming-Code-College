@@ -64,4 +64,4 @@ head.style.borderBottomstyle = "none";
 
 mouth.style.borderRadius = "50px";
 
-rightArm.style.left = "22.2%"
+rightArm.style.left = "22.5%"
