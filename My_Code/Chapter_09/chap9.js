@@ -61,7 +61,7 @@ function calculateIt() {
                     returnValue = operand1 * operand2;
                     break;
                 case "/":
-                    returnValue = operand1 * operand2;
+                    returnValue = operand1 / operand2;
                     break;
                 case "%":
                     returnValue = operand1 % operand2;
