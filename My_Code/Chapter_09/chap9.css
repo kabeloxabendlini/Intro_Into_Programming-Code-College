@@ -8,14 +8,14 @@ header {
 h2 {
     text-align: center;
     font-size: 1.2em;
-    border-top: 2px dashed yellow;
-    border-bottom: 2px dashed yellow;
+    border-top: 2px dashed rgb(223, 10, 10);
+    border-bottom: 2px dashed rgb(209, 11, 11);
 }
 input[type=text] {
     width: 40px;
     height: 40px;
     margin-left: 20px;
-    background-color: #DADADA;
+    background-color: #ffc400;
     font-size: 1.2em;
 }
 input[type=submit] {
@@ -23,12 +23,12 @@ input[type=submit] {
     font-size: 2em;
 }
 #calculator {
-    border: 1px solid #dadada;
+    border: 1px solid #000000;
     border-radius: 4px;
     padding: 4px;
 }
 .input-area {
-    background-color: #42FF8C;
+    background-color: #108816;
     padding: 8px;
     margin: 8px;
     text-align: center;
@@ -38,8 +38,8 @@ input[type=submit] {
     text-align: left;
 }
 .output-area {
-    background-color: #333333;
-    color: #FFFFFF;
+    background-color: #05718b;
+    color: #ffd900;
     padding: 8px;
     margin: 8px;
     font-size: 1.5em;
