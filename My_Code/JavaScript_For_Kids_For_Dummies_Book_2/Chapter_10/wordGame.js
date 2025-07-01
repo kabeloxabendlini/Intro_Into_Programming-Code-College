@@ -1,4 +1,5 @@
 let replaceButton = document.getElementById("replaceButton");
+
 replaceButton.addEventListener('click', replaceIt);
 function replaceIt() {
     let storyDiv = document.getElementById("story");
