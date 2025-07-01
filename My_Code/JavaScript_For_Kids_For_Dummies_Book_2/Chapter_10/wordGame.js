@@ -18,6 +18,7 @@ function replaceIt() {
     let animal = "<span class='replacement'>" + document.getElementById('animal').value + '</span>';
     let city = "<span class='replacement'>" + document.getElementById('city').value + '</span>';
     let verb = "<span class='replacement'>" + document.getElementById('verb').value + '</span>';
+    let country = "<span class='replacement'>" + document.getElementById('country').value + '</span>';
     /* Insert more variable definitions here */
     
     let theStory = "<h1>Douglas's Dance Party</h1> ";
@@ -34,6 +35,8 @@ function replaceIt() {
     theStory += 'Douglas danced the ' + animal + ' Dance, ';
     theStory += 'the ' + city + ' Twist, ';
     theStory += 'and took the prize for dancing the best Electric ' + verb + '.';
+    theStory += 'This type of stuff only happens in ' + country + '.';
+
 
     /* Put the rest of the story here, using the += operator */
     storyDiv.innerHTML = theStory;
