@@ -1,5 +1,11 @@
 var people = ["Mary", "Bobby", "Judy", "Eddie", "Herbie", "Paul", "Bobby"];
 var otherPeople = ["Teddy", "Goergie", "Katty", "Jack"];
+var htmlDIV = document.getElementById("peopleIKnow");
+
+var brother = myFamily.pop();
+myFamily.path("Matthew")
+
+htmlDIV.innerHTML = familySentence;
 
 // people = people.concat(otherPeople);
 
