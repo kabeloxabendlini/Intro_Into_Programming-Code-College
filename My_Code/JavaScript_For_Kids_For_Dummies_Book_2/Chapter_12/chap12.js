@@ -46,3 +46,4 @@ function stopTrain(trainPosition) {
     clearInterval(animation);
     }
 }
+
