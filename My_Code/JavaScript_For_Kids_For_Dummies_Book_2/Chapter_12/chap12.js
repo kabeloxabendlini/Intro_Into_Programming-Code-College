@@ -31,6 +31,8 @@ function checkPosition(currentPosition) {
         alert("OOOOO!");
         console.log("Crash!");
         clearInterval(animation);
+        train.style.left = 0;
+        trainPosition = 0;
     }
 }
 
@@ -40,10 +42,10 @@ function stopTrain() {
     }
 }
 
-function stopTrain(trainPosition) {
-    if (trainPosition === 420) {
-        console.log("Stop!")
-    clearInterval(animation);
-    }
-}
+// function stopTrain(trainPosition) {
+//     if (trainPosition === 420) {
+//         console.log("Stop!")
+//     clearInterval(animation);
+//     }
+// }
 
