@@ -27,15 +27,22 @@ function speedUp() {
 }
 
 function checkPosition(currentPosition) {
-    if (currentPosition === 260) {
+    if (currentPosition === 550) {
         alert("OOOOO!");
-        console.log("Crash!");
+        console.log("Stop!");
         clearInterval(animation);
     }
 }
 
 function stopTrain() {
-    if (trainPosition < 260) {
+    if (trainPosition < 550) {
         clearInterval(animation);
+    }
+}
+
+function stopTrain(trainPosition) {
+    if (trainPosition === 550) {
+        console.log("Stop!")
+    clearInterval(animation);
     }
 }
