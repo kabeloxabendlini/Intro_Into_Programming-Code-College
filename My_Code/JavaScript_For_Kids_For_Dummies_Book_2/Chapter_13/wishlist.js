@@ -46,3 +46,4 @@ function printView() {
     }
     window.print();
 }
+
