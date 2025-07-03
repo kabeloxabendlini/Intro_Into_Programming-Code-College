@@ -1,6 +1,6 @@
 var people = ["Mary", "Bobby", "Judy", "Eddie", "Herbie", "Paul", "Bobby"];
 var otherPeople = ["Teddy", "Goergie", "Katty", "Jack"];
-var htmlDIV = document.getElementById("peopleIKnow");
+// var htmlDIV = document.getElementById("peopleIKnow");
 
 // var brother = myFamily.pop();
 // myFamily.path("Matthew")
@@ -18,7 +18,7 @@ var htmlDIV = document.getElementById("peopleIKnow");
 // people = people.pop();
 // people.pop();
 
-// people = people.push("Teddy");
+// otherPeople = otherPeople.push("Teddy");
 // people.push("Teddy");
 
 // people = people.reverse();
