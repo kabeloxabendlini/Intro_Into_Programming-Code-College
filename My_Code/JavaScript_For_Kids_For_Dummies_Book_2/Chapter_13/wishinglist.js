@@ -1,40 +1,33 @@
-// Get all elements with ID 'addIt'
-const addButtons = document.querySelectorAll('#addIt');
+let iWantInput = document.getElementById("iWant");
+let sheWantInput = document.getElementById("sheWant");
+let addItButtons = document.querySelectorAll("#addIt");
+let printableBtn = document.getElementById("printable");
 
-// Get all inputs by ID
-const wantInputs = document.querySelectorAll('#iWant');
-const sheWantInput = document.querySelector('#sheWant'); // Only one with this ID
+let wishList = document.getElementById("wishList");
+let myList = document.getElementById("myList");
 
-// Get the lists
-const wishList = document.querySelector('#wishList');
-const myList = document.querySelector('#myList');
-
-// Attach add event to each Add It! button
-addButtons.forEach((button, index) => {
-  button.addEventListener('click', () => {
-    const input = wantInputs[index]; // Match button to input by order
-    if (input && input.value.trim() !== '') {
-      const li = document.createElement('li');
-      li.textContent = input.value;
-      wishList.appendChild(li);
-      input.value = '';
-    }
-
-    // Special case for wife input (if exists)
-    if (sheWantInput && sheWantInput.value.trim() !== '') {
-      const li = document.createElement('li');
-      li.textContent = sheWantInput.value;
-      myList.appendChild(li);
-      sheWantInput.value = '';
-    }
-  });
+// First "Add It!" for iWant
+addItButtons[0].addEventListener("click", () => {
+  let item = iWantInput.value.trim();
+  if (item) {
+    const li = document.createElement("li");
+    li.textContent = item;
+    wishList.appendChild(li);
+    iWantInput.value = "";
+  }
 });
 
-// Print button — pick the first one with the right ID
-const printButton = document.querySelector('#printable');
+// Second "Add It!" for sheWant
+addItButtons[1].addEventListener("click", () => {
+  let item = sheWantInput.value.trim();
+  if (item) {
+    let li = document.createElement("li");
+    li.textContent = item;
+    myList.appendChild(li);
+    sheWantInput.value = "";
+  }
+});
 
-if (printButton) {
-  printButton.addEventListener('click', () => {
-    window.print();
-  });
-}
+printableBtn.addEventListener("click", () => {
+  window.print();
+});

@@ -45,5 +45,4 @@ function printView() {
         wishList.innerHTML += "<li>" + myList[i] + "</li>";
     }
     window.print();
-}
-
+};
