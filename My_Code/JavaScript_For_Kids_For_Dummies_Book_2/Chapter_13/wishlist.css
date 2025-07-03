@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
 }
 #listPage.print {
-    background-color: #FAF2AD;
+    background-color: #ffed46;
     padding: 20px;
     font-family: cursive;
 }
@@ -19,4 +19,29 @@ body {
     line-height: 36px;
     font-size: 24px;
     font-family: cursive;
+};
+
+body {
+    font-family: Arial, sans-serif;
 }
+#wishList.print {
+    background-color: #ffed46;
+    padding: 20px;
+    font-family: cursive;
+}
+#wishList.print ul {
+    margin: 10px 0px;
+    padding: 0px;
+    border-left: 4px double brown;
+}
+#wishList.print li {
+    list-style-type:none;
+    margin: 0px -20px;
+    padding-left: 26px;
+    border-bottom: 1px solid green;
+    line-height: 36px;
+    font-size: 24px;
+    font-family: cursive;
+
+};
+

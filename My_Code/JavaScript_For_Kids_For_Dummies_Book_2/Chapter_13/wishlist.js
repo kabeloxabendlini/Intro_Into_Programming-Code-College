@@ -33,7 +33,7 @@ function resetInput(inputToReset) {
 }
 
 function printView() {
-    let listPage = document.getElementById("listPage");
+    let wishList = document.getElementById("listPage");
     let formArea = document.getElementById("formArea");
 
     formArea.style.display = "none";
@@ -46,3 +46,4 @@ function printView() {
     }
     window.print();
 };
+
