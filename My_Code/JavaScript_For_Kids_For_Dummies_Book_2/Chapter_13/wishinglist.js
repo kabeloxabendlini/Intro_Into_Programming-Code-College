@@ -4,7 +4,7 @@ let printableBtn = document.getElementById("printable");
 printableBtn.addEventListener("click", printView);
 
 let addItButtons = document.querySelectorAll("addIt");
-addItButtons[1].addEventListener("click", addTheThing);
+addItButtons.addEventListener("click", addTheThing);
 
 
 let myListing = [];
