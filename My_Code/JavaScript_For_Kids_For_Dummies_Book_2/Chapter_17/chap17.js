@@ -20,19 +20,33 @@
 
 //Listing 17.5
 var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday","Sunday"];
-var weather = ["Sunny", "Partly Sunny", "Partly Cloudy", "Cloudy", "Raining", "Snowing", "Thunderstorm", "Foggy"];
+var coldWeather = ["Partly-Cloudy", "Cloudy", "Raining", "Snowing", "Thunderstorm", "Foggy"];
+var hotWeather = ["Sunny", "Partly-Sunny"];
 
-var maxTemp = 56.7;
-var minTemp = 0;
+var maxTemp = 48;
+var minTemp = 8;
+
 generateWeather();
 
 function generateWeather() {
     for (var i = 0; i < days.length; i++) {
-        var weatherToday = weather[Math.floor(Math.random() * weather.length)];
+
         var tempToday = Math.floor(Math.random() * (maxTemp - minTemp) + minTemp);
-        
-        document.getElementById("7DayWeather").innerHTML += "<div id='" + days[i] + "' class='" +
-            weatherToday + "'><b>Forecast for " + days[i] + ":</b><br><br>" + weatherToday + " and " + 
-            tempToday + " degrees.</div>";
+
+        if (tempToday >= 28) {
+
+            let weatherToday = hotWeather[Math.floor(Math.random() * hotWeather.length)];
+
+            document.getElementById("7DayWeather").innerHTML += "<div id='" + days[i] + "' class='" +
+                weatherToday + "'><b>Forecast for " + days[i] + ":</b><br><br>" + weatherToday + " and " +
+                tempToday + " degrees.</div>";
+        } else {
+
+            let weatherToday = coldWeather[Math.floor(Math.random() * coldWeather.length)];
+
+            document.getElementById("7DayWeather").innerHTML += "<div id='" + days[i] + "' class='" +
+                weatherToday + "'><b>Forecast for " + days[i] + ":</b><br><br>" + weatherToday + " and " +
+                tempToday + " degrees.</div>";
+        }
     }
 }
