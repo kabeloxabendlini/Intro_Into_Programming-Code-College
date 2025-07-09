@@ -16,14 +16,17 @@
 
 .Sunny {
     background-color: yellow;
+     color: grey;
 }
 
 .Raining {
     background-color: lightskyblue;
+    color: grey;
 }
 
 .Cloudy {
     background-color: grey;
+    color: white;
 }
 
 .Thunderstorm {
