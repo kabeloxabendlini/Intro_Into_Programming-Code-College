@@ -1,70 +1,78 @@
-// declare globals
-var money = 20;
-var lunches = 0;
+// Global variables
+let money = 20;
+let lunches = 0;
+let totalPriceSpent = 0;
 
-//display lunch budget
-document.getElementById("money").innerHTML = money;
+// Cache DOM elements
+const moneyDisplay = document.getElementById("money");
+const receipt = document.getElementById("receipt");
+const orderButton = document.getElementById("placeOrder");
+const numSandwichesInput = document.getElementById("numSandwiches");
 
-//listen for order
-// orderButton = document.getElementById("placeOrder");
-// orderButton.addEventListener("click", buyLunches);
+// Display initial money
+moneyDisplay.innerHTML = money;
 
-document.getElementById("placeOrder").addEventListener("click", buyLunches);
+// Event listener for placing orders
+orderButton.addEventListener("click", buyLunches);
 
-/*
-buys specified number of sandwiches per day at current prices
-*/
+// Handle buying lunches
 function buyLunches() {
     resetForm();
-    var day = 0;
+    let day = 0;
+
+    const numberOfSandwiches = parseInt(numSandwichesInput.value);
+    if (isNaN(numberOfSandwiches) || numberOfSandwiches <= 0) {
+        alert("Please enter a valid number of sandwiches.");
+        return;
+    }
+
     while (money > 0) {
         day++;
-        var priceToday = getSandwichPrice();
-        var numberOfSandwiches = document.getElementById("numSandwiches").value;
-        var totalPrice = priceToday * numberOfSandwiches;
-
+        const priceToday = getSandwichPrice();
+        const totalPrice = priceToday * numberOfSandwiches;
 
         if (money >= totalPrice) {
-            money = money - totalPrice;
-            lunches++;
-            document.getElementById("receipt").innerHTML += "<p>On day " + day + ", sandwiches are: $" + priceToday + ". You have $" + money.toFixed(2) + " left.</p>";
+            money -= totalPrice;
+            lunches += numberOfSandwiches;
+            totalPriceSpent += totalPrice;
 
+            receipt.innerHTML += `<p>On day ${day}, sandwiches are: $${priceToday}. You have $${money.toFixed(2)} left.</p>`;
         } else {
-            document.getElementById("receipt").innerHTML += "<p>Today, sandwiches are: $" + priceToday + ". You don't have enough money. Maybe your sister will give you some of her sandwich.</p>";
-            money = 0;
+            receipt.innerHTML += `<p>Today, sandwiches are: $${priceToday}. You don't have enough money. Maybe your sister will give you some of her sandwich.</p>`;
+            break;
         }
-
     }
-    document.getElementById("receipt").innerHTML += "<p>You bought " + lunches + " lunches this week.</p>";
 
+    const avgPrice = (totalPriceSpent / lunches).toFixed(2);
+    receipt.innerHTML += `<p>You bought ${lunches} lunches this week.</p>`;
+    receipt.innerHTML += `<p>Average sandwich price: $${avgPrice}</p>`;
 }
 
-/*
-gets the current price of sandwiches
-*/
+// Generate random sandwich price between $0.00 and $1.00
 function getSandwichPrice() {
-    var sandwichPrice = (Math.random() * (1 - 0) + 1).toFixed(2);
-    return sandwichPrice;
+    return parseFloat((Math.random() * 1).toFixed(2));
 }
 
-/*
-resets the game so that a new order can be placed
-*/
+// Reset values and UI
 function resetForm() {
     money = 20;
     lunches = 0;
-    document.getElementById("receipt").innerHTML = "";
-
+    totalPriceSpent = 0;
+    receipt.innerHTML = "";
+    moneyDisplay.innerHTML = money;
 }
 
-let password;
-
-while (password !== "password") {
-    let userinput = prompt("Password please?");
-
-    if  (userinput === "password") {
-        password = "password"
+// Password prompt function
+function requestPassword() {
+    let password;
+    while (password !== "password") {
+        const userInput = prompt("Password please?");
+        if (userInput === "password") {
+            password = "password";
+        }
     }
-};
+    alert("Welcome.");
+}
 
-alert("Welcome.");
+// Prompt for password on page load
+requestPassword();
