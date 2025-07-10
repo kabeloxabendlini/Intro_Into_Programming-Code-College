@@ -16,22 +16,22 @@
 
 .Sunny {
     background-color: yellow;
-     color: grey;
+     color: black;
 }
 
 .Raining {
     background-color: lightskyblue;
-    color: grey;
+    color: black;
 }
 
 .Cloudy {
     background-color: grey;
-    color: white;
+    color: black;
 }
 
 .Thunderstorm {
     background-color:black#333;
-    color: grey;
+    color: black;
 }
 
 .Foggy {
@@ -45,7 +45,7 @@
 
 .Snowing {
     background-color: snow;
-}s
+}
 
 .Partly-Sunny {
     background-color: yellowgreen;
