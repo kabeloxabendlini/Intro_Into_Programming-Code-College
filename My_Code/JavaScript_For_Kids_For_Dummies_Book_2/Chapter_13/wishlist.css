@@ -1,47 +1,57 @@
+b/* General body style */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 20px;
 }
-#listPage.print {
+
+/* Shared style for both print sections */
+.print {
     background-color: #ffed46;
     padding: 20px;
     font-family: cursive;
+    border: 2px solid #333;
+    margin-bottom: 40px;
 }
-#listPage.print ul {
+
+/* Style for all list sections */
+.print ul {
     margin: 10px 0px;
     padding: 0px;
     border-left: 4px double rgb(8, 36, 114);
 }
-#listPage.print li {
-    list-style-type:none;
+
+.print li {
+    list-style-type: none;
     margin: 0px -20px;
     padding-left: 26px;
     border-bottom: 1px solid rgb(192, 10, 10);
     line-height: 36px;
     font-size: 24px;
-    font-family: cursive;
-};
+}
 
-body {
+/* Form area layout */
+#printMine, #printWife,
+#addMine, #addWife {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: rgb(8, 36, 114);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
     font-family: Arial, sans-serif;
 }
-#wishList.print {
-    background-color: #ffed46;
-    padding: 20px;
-    font-family: cursive;
-}
-#wishList.print ul {
-    margin: 10px 0px;
-    padding: 0px;
-    border-left: 4px double rgb(8, 36, 114);
-}
-#wishList.print li {
-    list-style-type:none;
-    margin: 0px -20px;
-    padding-left: 26px;
-    border-bottom: 1px solid rgb(192, 10, 10);
-    line-height: 36px;
-    font-size: 24px;
-    font-family: cursive;
 
-};
+input[type="text"] {
+    padding: 6px;
+    margin-left: 10px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 16px;
+}
 
+/* Button hover effects */
+button:hover {
+    background-color: rgb(5, 25, 80);
+}

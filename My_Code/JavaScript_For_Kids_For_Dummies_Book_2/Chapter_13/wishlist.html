@@ -1,66 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wish List</title>
-  <link rel="stylesheet" href="wishlist.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kabelo Xabendlini's very own Wish List</title>
+  <link rel="stylesheet" href="wishlist.css" />
 </head>
-
 <body>
   <div id="listPage" class="print">
-
     <h1>My Wish List</h1>
 
-    <div id="formArea">
+    <div id="formArea1">
       <label>What I want:
         <input type="text" id="iWant" />
       </label>
-      <button type="button" id="addIt">Add It!</button>
-      <br>
-      <br />
-      <button type="button" id="printable">Print Your List</button>
+      <button type="button" id="addMine">Add It!</button>
+      <br /><br />
+      <button type="button" id="printMine">Print Your List</button>
     </div>
-    <ul id="wishList"></ul>
-  </div>
-
-  
-
-<br>
-</br>
-<br>
-</br>
-
-
-  <div id="wishList" class="print">
-
-    <h1>My Wish List</h1>
-
-    <div id="formArea">
-      <label>What I want:
-        <input type="text" id="iWant" />
-      </label>
-      <button type="button" id="addIt">Add It!</button>
-      <br>
-      <br />
-      <label>What my wife wants:
-        <input type="text" id="sheWant" />
-      </label>
-      <button type="button" id="addIt">Add It!</button>
-      <br>
-      <br />
-      <button type="button" id="printable">Print Your List</button>
-    </div>
-    <ul id="wishList"></ul>
-    <br>
-    <br />
     <ul id="myList"></ul>
   </div>
 
-  <script src="wishinglist.js"></script>
+  <hr />
+
+  <div id="wifeListPage" class="print">
+    <h1>Wife's Wish List</h1>
+
+    <div id="formArea2">
+      <label>What my wife wants:
+        <input type="text" id="sheWant" />
+      </label>
+      <button type="button" id="addWife">Add It!</button>
+      <br /><br />
+      <button type="button" id="printWife">Print Wife's List</button>
+    </div>
+    <ul id="wifeList"></ul>
+  </div>
+
   <script src="wishlist.js"></script>
 </body>
-
 </html>

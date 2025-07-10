@@ -1,49 +1,43 @@
-let printButton = document.getElementById("printable");
-printButton.addEventListener("click", printView);
+// Get elements for your list
+var myInput = document.getElementById("iWant");
+var addMineBtn = document.getElementById("addMine");
+var myList = document.getElementById("myList");
+var printMineBtn = document.getElementById("printMine");
 
-let addButton = document.getElementById("addIt");
-addButton.addEventListener("click", addTheThing);
+// Get elements for wife's list
+var wifeInput = document.getElementById("sheWant");
+var addWifeBtn = document.getElementById("addWife");
+var wifeList = document.getElementById("wifeList");
+var printWifeBtn = document.getElementById("printWife");
 
-
-let myList = [];
-let myListArea = document.getElementById("wishList");
-
-
-
-function addTheThing() {
-
-    let theThing = document.getElementById("iWant");
-
-    addToTheList(theThing);
-    resetInput(theThing);
-
+// Function to add item to a list
+function addItem(inputField, listElement) {
+  var item = inputField.value.trim();
+  if (item !== "") {
+    const li = document.createElement("li");
+    li.textContent = item;
+    listElement.appendChild(li);
+    inputField.value = "";
+    inputField.focus();
+  }
 }
 
-function addToTheList(thingToAdd) {
-    myList.push(thingToAdd.value);
-    let newListItem = document.createElement("li");
-    newListItem.innerHTML = myList[myList.length - 1];
+// Add item to your wish list
+addMineBtn.addEventListener("click", () => {
+  addItem(myInput, myList);
+});
 
-    myListArea.appendChild(newListItem);
+// Add item to wife's wish list
+addWifeBtn.addEventListener("click", () => {
+  addItem(wifeInput, wifeList);
+});
 
-}
+// Print your wish list
+printMineBtn.addEventListener("click", () => {
+  window.print();
+});
 
-function resetInput(inputToReset) {
-    inputToReset.value = "";
-}
-
-function printView() {
-    let wishList = document.getElementById("listPage");
-    let formArea = document.getElementById("formArea");
-
-    formArea.style.display = "none";
-    listPage.className = "print";
-    myListArea.innerHTML = "";
-    myList.sort();
-
-    for (let i = 0; i < myList.length; i++) {
-        wishList.innerHTML += "<li>" + myList[i] + "</li>";
-    }
-    window.print();
-};
-
+// Print wife's wish list
+printWifeBtn.addEventListener("click", () => {
+  window.print();
+});

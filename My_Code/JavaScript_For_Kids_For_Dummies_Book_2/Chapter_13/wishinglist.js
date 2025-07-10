@@ -1,53 +1,53 @@
-// Let printableBtn variable
+// // Let printableBtn variable
 
-let printableBtn = document.getElementById("printable");
-printableBtn.addEventListener("click", printView);
+// let printableBtn = document.getElementById("printable");
+// printableBtn.addEventListener("click", printView);
 
-let addItButtons = document.querySelectorAll("addIt");
-addItButtons.addEventListener("click", addTheThing);
-
-
-let myListing = [];
-let myList = document.getElementById("myList");
+// let addItButtons = document.querySelectorAll("addIt");
+// addItButtons.addEventListener("click", addTheThing);
 
 
+// let myListing = [];
+// let myList = document.getElementById("myList");
 
-function addTheThing() {
 
-    let theThing = document.getElementById("iWant");
 
-    addToTheList(theThing);
-    resetInput(theThing);
+// function addTheThing() {
 
-}
+//     let theThing = document.getElementById("iWant");
 
-function addToTheList(thingToAdd) {
-    myList.push(thingToAdd.value);
-    let newListItem = document.createElement("li");
-    newListItem.innerHTML = myList[myList.length - 1];
+//     addToTheList(theThing);
+//     resetInput(theThing);
 
-    myListArea.appendChild(newListItem);
+// }
 
-}
+// function addToTheList(thingToAdd) {
+//     myList.push(thingToAdd.value);
+//     let newListItem = document.createElement("li");
+//     newListItem.innerHTML = myList[myList.length - 1];
 
-function resetInput(inputToReset) {
-    inputToReset.value = "";
-}
+//     myListArea.appendChild(newListItem);
 
-function printView() {
-    let listPage = document.getElementById("wishList");
-    let formArea = document.getElementById("formArea");
+// }
 
-    formArea.style.display = "none";
-    wishList.className = "print";
-    myListArea.innerHTML = "";
-    myList.sort();
+// function resetInput(inputToReset) {
+//     inputToReset.value = "";
+// }
 
-    for (let i = 0; i < myList.length; i++) {
-        wishList.innerHTML += "<li>" + myList[i] + "</li>";
-    }
-    window.print();
-};
+// function printView() {
+//     let listPage = document.getElementById("wishList");
+//     let formArea = document.getElementById("formArea");
+
+//     formArea.style.display = "none";
+//     wishList.className = "print";
+//     myListArea.innerHTML = "";
+//     myList.sort();
+
+//     for (let i = 0; i < myList.length; i++) {
+//         wishList.innerHTML += "<li>" + myList[i] + "</li>";
+//     }
+//     window.print();
+// };
 
 // let iWantInput = document.getElementById("iWant");
 // let sheWantInput = document.getElementById("sheWant");
