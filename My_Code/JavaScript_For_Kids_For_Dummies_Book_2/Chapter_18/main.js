@@ -55,7 +55,7 @@ function getSandwichPrice() {
 
 // Reset values and UI
 function resetForm() {
-    money = 20;
+    money = 40;
     lunches = 0;
     totalPriceSpent = 0;
     receipt.innerHTML = "";
@@ -65,10 +65,10 @@ function resetForm() {
 // Password prompt function
 function requestPassword() {
     let password;
-    while (password !== "password") {
+    while (password !== "Kabelo") {
         const userInput = prompt("Password please?");
-        if (userInput === "password") {
-            password = "password";
+        if (userInput === "Kabelo") {
+            password = "Kabelo";
         }
     }
     alert("Welcome.");
