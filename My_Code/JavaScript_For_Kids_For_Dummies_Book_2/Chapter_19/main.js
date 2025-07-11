@@ -30,7 +30,7 @@ function generateWeather() {
         weatherToday = weather[Math.floor(Math.random() * weather.length)];
         tempToday = Math.floor(Math.random() * (maxTemp - minTemp) + minTemp);
         dailyTemp[i] = tempToday;
-        document.getElementById("5DayWeather").innerHTML += "<div id='" + days[i] + "' class='" + weatherToday + "'><b>Forecast for " + days[i] + ":</b><br><br>" + weatherToday + " and " + tempToday + " degrees.</div>";
+        document.getElementById("7DayWeather").innerHTML += "<div id='" + days[i] + "' class='" + weatherToday + "'><b>Forecast for " + days[i] + ":</b><br><br>" + weatherToday + " and " + tempToday + " degrees.</div>";
     }
 }
 
