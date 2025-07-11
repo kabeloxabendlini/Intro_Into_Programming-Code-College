@@ -119,4 +119,4 @@ for (var i = 0; i < days.length; i++) {
     totalGlasses = glassesSold + totalGlasses;
 
     document.getElementById("result").innerHTML += "<p>" + days[i] + ", you sold " + glassesSold + " glasses of lemonade.</p>";
-}
+}sssssss
