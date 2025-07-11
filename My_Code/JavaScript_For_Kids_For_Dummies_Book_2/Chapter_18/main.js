@@ -1,5 +1,5 @@
 // Global variables
-let money = 20;
+let money = 40;
 let lunches = 0;
 let totalPriceSpent = 0;
 
