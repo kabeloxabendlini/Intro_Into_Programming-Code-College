@@ -99,3 +99,24 @@ function resetForm() {
     document.getElementById("result").innerHTML = "";
 
 }
+
+for (var i = 0; i < days.length; i++) {
+
+    var currentPrice = glassPrice; 
+
+    if (days[i] === "Sunday") {
+        currentPrice = Math.max(0.01, glassPrice - 1); // prevent free or negative prices
+    }
+
+    glassesSold = Math.floor(dailyTemp[i] / currentPrice);
+
+    glassesLeft = numGlasses - totalGlasses;
+
+    if (glassesSold > glassesLeft) {
+        glassesSold = glassesLeft;
+    }
+
+    totalGlasses = glassesSold + totalGlasses;
+
+    document.getElementById("result").innerHTML += "<p>" + days[i] + ", you sold " + glassesSold + " glasses of lemonade.</p>";
+}
