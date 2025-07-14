@@ -1,3 +1,5 @@
+// *************************************** Line 1 - 125 ********************************************//
+
 // create days of week array
 var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday","Sunday"];
 
@@ -119,4 +121,123 @@ for (var i = 0; i < days.length; i++) {
     totalGlasses = glassesSold + totalGlasses;
 
     document.getElementById("result").innerHTML += "<p>" + days[i] + ", you sold " + glassesSold + " glasses of lemonade.</p>";
-}sssssss
+}
+
+
+// *************************************** Line 1 - 125 ********************************************//
+
+// *************************************** Line 127 - 239 ******************************************//
+
+// // Define days of the week
+
+// const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+// // Weather types
+// const weather = ["Sunny", "Partly Sunny", "Partly Cloudy", "Cloudy", "Raining", "Snowing", "Thunderstorm", "Foggy"];
+
+// // Temperature range
+// const maxTemp = 110;
+// const minTemp = 32;
+
+// // Cost to make one glass
+// const lemonadeCost = 0.5;
+
+// // Array to store daily temperatures
+// let dailyTemp = [];
+
+// // Generate weather on load
+// generateWeather();
+
+// // Attach event listener to the button
+// document.getElementById("OpenTheStand").addEventListener("click", openTheStand);
+
+// /**
+//  * Generate random weather for each day and render it
+//  */
+// function generateWeather() {
+//     const weatherContainer = document.getElementById("7DayWeather");
+//     weatherContainer.innerHTML = ""; // Clear if regenerating
+
+//     for (let i = 0; i < days.length; i++) {
+//         const currentWeather = weather[Math.floor(Math.random() * weather.length)];
+//         const currentTemp = Math.floor(Math.random() * (maxTemp - minTemp) + minTemp);
+
+//         dailyTemp[i] = currentTemp;
+
+//         const dayBox = document.createElement("div");
+//         dayBox.id = days[i];
+//         dayBox.className = currentWeather;
+//         dayBox.innerHTML = `
+//             <b>Forecast for ${days[i]}:</b><br><br>
+//             ${currentWeather} and ${currentTemp}°F
+//         `;
+
+//         weatherContainer.appendChild(dayBox);
+//     }
+// }
+
+// /**
+//  * Calculate lemonade sales based on input and display results
+//  */
+// function openTheStand() {
+//     resetForm(); // Clear previous output
+
+//     const numGlasses = Number(document.getElementById("numGlasses").value);
+//     const glassPrice = Number(document.getElementById("glassPrice").value);
+//     const resultDiv = document.getElementById("result");
+
+//     if (numGlasses <= 0 || glassPrice < 0.5) {
+//         resultDiv.innerHTML = "<p>Please enter valid input values!</p>";
+//         return;
+//     }
+
+//     let totalGlasses = 0;
+
+//     for (let i = 0; i < days.length; i++) {
+//         let currentPrice = glassPrice;
+
+//         // Sunday discount
+//         if (days[i] === "Sunday") {
+//             currentPrice = Math.max(0.01, glassPrice - 1);
+//         }
+
+//         let glassesSold = Math.floor(dailyTemp[i] / currentPrice);
+//         const glassesLeft = numGlasses - totalGlasses;
+
+//         if (glassesSold > glassesLeft) {
+//             glassesSold = glassesLeft;
+//         }
+
+//         totalGlasses += glassesSold;
+
+//         resultDiv.innerHTML += `<p><strong>${days[i]}</strong>: Sold ${glassesSold} glasses.</p>`;
+//     }
+
+//     displayResults(numGlasses, glassPrice, totalGlasses);
+// }
+
+// /**
+//  * Display weekly summary
+//  */
+// function displayResults(weeklyInventory, glassPrice, weeklySales) {
+//     const revenue = weeklySales * glassPrice;
+//     const expense = weeklyInventory * lemonadeCost;
+//     const profit = revenue - expense;
+//     const leftOver = weeklyInventory - weeklySales;
+
+//     const resultDiv = document.getElementById("result");
+//     resultDiv.innerHTML += `<hr>`;
+//     resultDiv.innerHTML += `<p><strong>Total sold:</strong> ${weeklySales} glasses</p>`;
+//     resultDiv.innerHTML += `<p><strong>Total revenue:</strong> $${revenue.toFixed(2)}</p>`;
+//     resultDiv.innerHTML += `<p><strong>Leftover stock:</strong> ${leftOver} glasses</p>`;
+//     resultDiv.innerHTML += `<p><strong>Profit:</strong> $${profit.toFixed(2)}</p>`;
+// }
+
+// /**
+//  * Clear the result section before new run
+//  */
+// function resetForm() {
+//     document.getElementById("result").innerHTML = "";
+// }
+
+// // *************************************** Line 127 - 239 ******************************************//
