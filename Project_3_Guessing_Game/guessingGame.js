@@ -1,7 +1,7 @@
 // ********************************* Line 1 - 11 ********************************************* */
 // The if else part line 2 - 10
 // let secret = 7;
-// var guess = parseInt(prompt("Please guess the secret number(1 - 20)"));
+// var guess = parseInt(prompt("Please guess the secret number (1 - 20)"));
 
 
 // if (guess === secret) {
@@ -13,7 +13,7 @@
 // ********************************** Line 1 - 11  ******************************************* */
 
 // ********************************** Line 15 - 30 ****************************************** */
-// The while loop line 14 - 26
+// // The while loop line 14 - 26
 // let secret = 7;
 // var guess = parseInt(prompt("Please guess the secret number(1 - 20)"));
 
