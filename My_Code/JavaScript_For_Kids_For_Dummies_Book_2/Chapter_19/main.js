@@ -1,243 +1,222 @@
 // *************************************** Line 1 - 125 ********************************************//
 
-// create days of week array
-var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday","Sunday"];
+// // create days of week array
+// var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday","Sunday"];
 
-// define types of weather
-var weather = ["Sunny", "Partly Sunny", "Partly Cloudy", "Cloudy", "Raining", "Snowing", "Thunderstorm", "Foggy"];
+// // define types of weather
+// var weather = ["Sunny", "Partly Sunny", "Partly Cloudy", "Cloudy", "Raining", "Snowing", "Thunderstorm", "Foggy"];
 
-// set min and max temps
-var maxTemp = 110;
-var minTemp = 32;
+// // set min and max temps
+// var maxTemp = 110;
+// var minTemp = 32;
 
-// cost (to you) of a cup of lemonade
-var lemonadeCost = 0.5;
+// // cost (to you) of a cup of lemonade
+// var lemonadeCost = 0.5;
 
-// array for storing daily temps
-var dailyTemp = [];
+// // array for storing daily temps
+// var dailyTemp = [];
 
-// listen for order
-document.getElementById("OpenTheStand").addEventListener("click", openTheStand);
+// // listen for order
+// document.getElementById("OpenTheStand").addEventListener("click", openTheStand);
 
-// make the week's weather
-generateWeather();
+// // make the week's weather
+// generateWeather();
 
-/**
-generates weather for the week
-**/
-function generateWeather() {
-    var weatherToday;
-    var tempToday;
-    for (var i = 0; i < days.length; i++) {
-        weatherToday = weather[Math.floor(Math.random() * weather.length)];
-        tempToday = Math.floor(Math.random() * (maxTemp - minTemp) + minTemp);
-        dailyTemp[i] = tempToday;
-        document.getElementById("7DayWeather").innerHTML += "<div id='" + days[i] + "' class='" + weatherToday + "'><b>Forecast for " + days[i] + ":</b><br><br>" + weatherToday + " and " + tempToday + " degrees.</div>";
-    }
-}
+// /**
+// generates weather for the week
+// **/
+// function generateWeather() {
+//     var weatherToday;
+//     var tempToday;
+//     for (var i = 0; i < days.length; i++) {
+//         weatherToday = weather[Math.floor(Math.random() * weather.length)];
+//         tempToday = Math.floor(Math.random() * (maxTemp - minTemp) + minTemp);
+//         dailyTemp[i] = tempToday;
+//         document.getElementById("7DayWeather").innerHTML += "<div id='" + days[i] + "' class='" + weatherToday + "'><b>Forecast for " + days[i] + ":</b><br><br>" + weatherToday + " and " + tempToday + " degrees.</div>";
+//     }
+// }
 
-/**
-calculates glasses of lemonade sold
-**/
-function openTheStand() {
-    var glassesSold = 0; // daily
-    var totalGlasses = 0; // weekly
-    var glassesLeft = 0; // left to sell
+// /**
+// calculates glasses of lemonade sold
+// **/
+// function openTheStand() {
+//     var glassesSold = 0; // daily
+//     var totalGlasses = 0; // weekly
+//     var glassesLeft = 0; // left to sell
 
-    // clear out previous results
-    resetForm();
+//     // clear out previous results
+//     resetForm();
 
-    // get input
-    var numGlasses = Number(document.getElementById("numGlasses").value);
-    var glassPrice = Number(document.getElementById("glassPrice").value);
+//     // get input
+//     var numGlasses = Number(document.getElementById("numGlasses").value);
+//     var glassPrice = Number(document.getElementById("glassPrice").value);
 
 
-    for (var i = 0; i < days.length; i++) {
+//     for (var i = 0; i < days.length; i++) {
 
-        // glasses sold depends on temp and price
-        glassesSold = Math.floor(dailyTemp[i] / glassPrice);
+//         // glasses sold depends on temp and price
+//         glassesSold = Math.floor(dailyTemp[i] / glassPrice);
 
-        // how many glasses do we have now?
-        glassesLeft = numGlasses - totalGlasses;
+//         // how many glasses do we have now?
+//         glassesLeft = numGlasses - totalGlasses;
 
-        // we can't sell more than we have
-        if (glassesSold > glassesLeft) {
-            glassesSold = glassesLeft;
-        }
+//         // we can't sell more than we have
+//         if (glassesSold > glassesLeft) {
+//             glassesSold = glassesLeft;
+//         }
 
-        // increase the weekly total
-        totalGlasses = glassesSold + totalGlasses;
+//         // increase the weekly total
+//         totalGlasses = glassesSold + totalGlasses;
 
-        // display daily total
-        document.getElementById("result").innerHTML += "<p>" + days[i] + ", you sold " + glassesSold + " glasses of lemonade.</p>";
+//         // display daily total
+//         document.getElementById("result").innerHTML += "<p>" + days[i] + ", you sold " + glassesSold + " glasses of lemonade.</p>";
 
-    }
+//     }
 
-    displayResults(numGlasses, glassPrice, totalGlasses);
+//     displayResults(numGlasses, glassPrice, totalGlasses);
 
-}
+// }
 
-/**
-calculates results and displays a report
-**/
-function displayResults(weeklyInventory, glassPrice, weeklySales) {
-    // calculate results
-    var revenue = weeklySales * glassPrice;
-    var expense = weeklyInventory * lemonadeCost;
-    var leftOver = weeklyInventory - weeklySales;
-    var profit = revenue - expense;
+// /**
+// calculates results and displays a report
+// **/
+// function displayResults(weeklyInventory, glassPrice, weeklySales) {
+//     // calculate results
+//     var revenue = weeklySales * glassPrice;
+//     var expense = weeklyInventory * lemonadeCost;
+//     var leftOver = weeklyInventory - weeklySales;
+//     var profit = revenue - expense;
 
-    // print out the weekly report
-    document.getElementById("result").innerHTML += "<p>You sold a total of " + weeklySales + " glasses of lemonade this week.</p>";
-    document.getElementById("result").innerHTML += "<p>Total revenue: $" + revenue + ".</p>";
-    document.getElementById("result").innerHTML += "<p>You have " + leftOver + " glasses of lemonade left over.</p>";
-    document.getElementById("result").innerHTML += "<p>Each glass costs you $" + lemonadeCost + ". Your profit was $" + profit + ".";
-}
+//     // print out the weekly report
+//     document.getElementById("result").innerHTML += "<p>You sold a total of " + weeklySales + " glasses of lemonade this week.</p>";
+//     document.getElementById("result").innerHTML += "<p>Total revenue: $" + revenue + ".</p>";
+//     document.getElementById("result").innerHTML += "<p>You have " + leftOver + " glasses of lemonade left over.</p>";
+//     document.getElementById("result").innerHTML += "<p>Each glass costs you $" + lemonadeCost + ". Your profit was $" + profit + ".";
+// }
 
-/**
-resets the game so that a new order can be placed
-**/
-function resetForm() {
-    document.getElementById("result").innerHTML = "";
+// /**
+// resets the game so that a new order can be placed
+// **/
+// function resetForm() {
+//     document.getElementById("result").innerHTML = "";
 
-}
+// }
 
-for (var i = 0; i < days.length; i++) {
+// for (var i = 0; i < days.length; i++) {
 
-    var currentPrice = glassPrice; 
+//     var currentPrice = glassPrice; 
 
-    if (days[i] === "Sunday") {
-        currentPrice = Math.max(0.01, glassPrice - 1); // prevent free or negative prices
-    }
+//     if (days[i] === "Sunday") {
+//         currentPrice = Math.max(0.01, glassPrice - 1); // prevent free or negative prices
+//     }
 
-    glassesSold = Math.floor(dailyTemp[i] / currentPrice);
+//     glassesSold = Math.floor(dailyTemp[i] / currentPrice);
 
-    glassesLeft = numGlasses - totalGlasses;
+//     glassesLeft = numGlasses - totalGlasses;
 
-    if (glassesSold > glassesLeft) {
-        glassesSold = glassesLeft;
-    }
+//     if (glassesSold > glassesLeft) {
+//         glassesSold = glassesLeft;
+//     }
 
-    totalGlasses = glassesSold + totalGlasses;
+//     totalGlasses = glassesSold + totalGlasses;
 
-    document.getElementById("result").innerHTML += "<p>" + days[i] + ", you sold " + glassesSold + " glasses of lemonade.</p>";
-}
+//     document.getElementById("result").innerHTML += "<p>" + days[i] + ", you sold " + glassesSold + " glasses of lemonade.</p>";
+// }
 
 
 // *************************************** Line 1 - 125 ********************************************//
 
 // *************************************** Line 127 - 239 ******************************************//
 
-// // Define days of the week
+const days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+const weatherTypes = ["Sunny","Partly Sunny","Partly Cloudy","Cloudy","Raining","Snowing","Thunderstorm","Foggy"];
+const weatherIcons = {
+    "Sunny": "☀️", "Partly Sunny": "🌤️", "Partly Cloudy": "⛅",
+    "Cloudy": "☁️", "Raining": "🌧️", "Snowing": "❄️",
+    "Thunderstorm": "⛈️", "Foggy": "🌫️"
+};
+const lemonadeCost = 0.5;
+let dailyTemp = [];
 
-// const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+function generateWeather() {
+    const grid = document.getElementById("7DayWeather");
+    grid.innerHTML = "";
+    dailyTemp = [];
 
-// // Weather types
-// const weather = ["Sunny", "Partly Sunny", "Partly Cloudy", "Cloudy", "Raining", "Snowing", "Thunderstorm", "Foggy"];
+    for (let i = 0; i < days.length; i++) {
+        const w = weatherTypes[Math.floor(Math.random() * weatherTypes.length)];
+        const t = Math.floor(Math.random() * (110 - 32) + 32);
+        dailyTemp.push(t);
 
-// // Temperature range
-// const maxTemp = 110;
-// const minTemp = 32;
+        const card = document.createElement("div");
+        card.className = "day-card " + w.replace(/\s/g, "-");
+        card.innerHTML = `
+            <div class="day-name">${days[i].slice(0,3)}</div>
+            <div class="weather-icon">${weatherIcons[w]}</div>
+            <div class="weather-type">${w}</div>
+            <div class="temp">${t}°F</div>
+        `;
+        grid.appendChild(card);
+    }
+}
 
-// // Cost to make one glass
-// const lemonadeCost = 0.5;
+function openTheStand() {
+    const errorEl = document.getElementById("errorMsg");
+    errorEl.classList.add("hidden");
 
-// // Array to store daily temperatures
-// let dailyTemp = [];
+    const numGlasses = Number(document.getElementById("numGlasses").value);
+    const glassPrice = Number(document.getElementById("glassPrice").value);
 
-// // Generate weather on load
-// generateWeather();
+    if (!numGlasses || numGlasses < 1 || !glassPrice || glassPrice < 0.5) {
+        errorEl.textContent = "Please enter a valid number of glasses (≥1) and price (≥$0.50).";
+        errorEl.classList.remove("hidden");
+        return;
+    }
 
-// // Attach event listener to the button
-// document.getElementById("OpenTheStand").addEventListener("click", openTheStand);
+    let totalSold = 0;
+    const dailySales = [];
 
-// /**
-//  * Generate random weather for each day and render it
-//  */
-// function generateWeather() {
-//     const weatherContainer = document.getElementById("7DayWeather");
-//     weatherContainer.innerHTML = ""; // Clear if regenerating
+    for (let i = 0; i < days.length; i++) {
+        let price = glassPrice;
+        if (days[i] === "Sunday") price = Math.max(0.01, glassPrice - 1);
 
-//     for (let i = 0; i < days.length; i++) {
-//         const currentWeather = weather[Math.floor(Math.random() * weather.length)];
-//         const currentTemp = Math.floor(Math.random() * (maxTemp - minTemp) + minTemp);
+        let sold = Math.floor(dailyTemp[i] / price);
+        const left = numGlasses - totalSold;
+        if (sold > left) sold = left;
 
-//         dailyTemp[i] = currentTemp;
+        totalSold += sold;
+        dailySales.push(sold);
+    }
 
-//         const dayBox = document.createElement("div");
-//         dayBox.id = days[i];
-//         dayBox.className = currentWeather;
-//         dayBox.innerHTML = `
-//             <b>Forecast for ${days[i]}:</b><br><br>
-//             ${currentWeather} and ${currentTemp}°F
-//         `;
+    const revenue = totalSold * glassPrice;
+    const expense = numGlasses * lemonadeCost;
+    const profit  = revenue - expense;
+    const leftover = numGlasses - totalSold;
+    const maxSold = Math.max(...dailySales, 1);
 
-//         weatherContainer.appendChild(dayBox);
-//     }
-// }
+    document.getElementById("rSold").textContent = totalSold;
+    document.getElementById("rLeft").textContent = leftover;
+    document.getElementById("rRev").textContent  = "$" + revenue.toFixed(2);
 
-// /**
-//  * Calculate lemonade sales based on input and display results
-//  */
-// function openTheStand() {
-//     resetForm(); // Clear previous output
+    const rp = document.getElementById("rProfit");
+    rp.textContent = (profit >= 0 ? "+ " : "− ") + "$" + Math.abs(profit).toFixed(2);
+    rp.className = "res-value " + (profit >= 0 ? "profit" : "loss");
 
-//     const numGlasses = Number(document.getElementById("numGlasses").value);
-//     const glassPrice = Number(document.getElementById("glassPrice").value);
-//     const resultDiv = document.getElementById("result");
+    let rows = "";
+    for (let i = 0; i < days.length; i++) {
+        const pct = Math.round((dailySales[i] / maxSold) * 100);
+        const isSunday = days[i] === "Sunday";
+        rows += `
+            <div class="day-row">
+                <span class="d-name">${days[i]}${isSunday ? '<span class="badge-sunday">-$1</span>' : ''}</span>
+                <div class="d-bar-wrap"><div class="d-bar" style="width:${pct}%"></div></div>
+                <span class="d-sold">${dailySales[i]} glasses</span>
+            </div>`;
+    }
 
-//     if (numGlasses <= 0 || glassPrice < 0.5) {
-//         resultDiv.innerHTML = "<p>Please enter valid input values!</p>";
-//         return;
-//     }
+    document.getElementById("dayResults").innerHTML = rows;
+    document.getElementById("resultsCard").classList.remove("hidden");
+}
 
-//     let totalGlasses = 0;
-
-//     for (let i = 0; i < days.length; i++) {
-//         let currentPrice = glassPrice;
-
-//         // Sunday discount
-//         if (days[i] === "Sunday") {
-//             currentPrice = Math.max(0.01, glassPrice - 1);
-//         }
-
-//         let glassesSold = Math.floor(dailyTemp[i] / currentPrice);
-//         const glassesLeft = numGlasses - totalGlasses;
-
-//         if (glassesSold > glassesLeft) {
-//             glassesSold = glassesLeft;
-//         }
-
-//         totalGlasses += glassesSold;
-
-//         resultDiv.innerHTML += `<p><strong>${days[i]}</strong>: Sold ${glassesSold} glasses.</p>`;
-//     }
-
-//     displayResults(numGlasses, glassPrice, totalGlasses);
-// }
-
-// /**
-//  * Display weekly summary
-//  */
-// function displayResults(weeklyInventory, glassPrice, weeklySales) {
-//     const revenue = weeklySales * glassPrice;
-//     const expense = weeklyInventory * lemonadeCost;
-//     const profit = revenue - expense;
-//     const leftOver = weeklyInventory - weeklySales;
-
-//     const resultDiv = document.getElementById("result");
-//     resultDiv.innerHTML += `<hr>`;
-//     resultDiv.innerHTML += `<p><strong>Total sold:</strong> ${weeklySales} glasses</p>`;
-//     resultDiv.innerHTML += `<p><strong>Total revenue:</strong> $${revenue.toFixed(2)}</p>`;
-//     resultDiv.innerHTML += `<p><strong>Leftover stock:</strong> ${leftOver} glasses</p>`;
-//     resultDiv.innerHTML += `<p><strong>Profit:</strong> $${profit.toFixed(2)}</p>`;
-// }
-
-// /**
-//  * Clear the result section before new run
-//  */
-// function resetForm() {
-//     document.getElementById("result").innerHTML = "";
-// }
-
-// // *************************************** Line 127 - 239 ******************************************//
+document.getElementById("OpenTheStand").addEventListener("click", openTheStand);
+generateWeather();
